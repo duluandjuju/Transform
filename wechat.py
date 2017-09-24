@@ -5,6 +5,9 @@ app = Flask(__name__)
 
 @app.route("/", methods=["POST", "GET"])
 def wechat_auth():
+    if request.method == "POST":
+        return ""
+
     if request.method == "GET":
         print("auth req coming")
         data = request.args
